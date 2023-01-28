@@ -6,13 +6,6 @@ const dlEL = document.getElementById("delete-btn")
 const tabBtn = document.getElementById("tab-btn")
 const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
 
-
-inputEl.addEventListener("keyup", function(event) {
-    if (event.key === 'Enter') {
-      inputBtn.click();
-    }
-  });
-
 if (leadsFromLocalStorage) {
     myLeads = leadsFromLocalStorage
     render(myLeads)
@@ -53,3 +46,9 @@ dlEL.addEventListener("dblclick", function() {
     myLeads = []
     render(myLeads)
 })
+
+inputEl.addEventListener("keyup", function(event) {
+    if (event.key === 'Enter') {
+      inputBtn.click();
+    }
+  });
