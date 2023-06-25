@@ -11,6 +11,18 @@ if (leadsFromLocalStorage) {
     render(myLeads)
 }
 
+dlEL.addEventListener("dblclick", function() {
+    localStorage.clear()
+    myLeads = []
+    render(myLeads)
+})
+
+inputEl.addEventListener("keyup", function(event) {
+    if (event.key === 'Enter') {
+      inputBtn.click();
+    }
+  });
+
 tabBtn.addEventListener("click", function(){    
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
         myLeads.push(tabs[0].url)
@@ -39,16 +51,3 @@ function render(leads) {
     }
     ulEl.innerHTML = listItems  
 }
-
-
-dlEL.addEventListener("dblclick", function() {
-    localStorage.clear()
-    myLeads = []
-    render(myLeads)
-})
-
-inputEl.addEventListener("keyup", function(event) {
-    if (event.key === 'Enter') {
-      inputBtn.click();
-    }
-  });
