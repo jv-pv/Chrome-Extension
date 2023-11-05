@@ -14,8 +14,8 @@ main {
 }
 
 .container {
-  display: flex;
-  flex-flow: column wrap;
+  /* display: flex; */
+  /* flex-flow: column wrap; */
   margin: 10px;
 }
 
