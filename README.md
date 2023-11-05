@@ -1,5 +1,5 @@
 # Chrome Extension
-Chrome extension that stores website url's, and saves them to local storage.
+Chrome extension that stores website url's and saves them to local storage.
 
  ## Functionalty
 - Saves input url into list.
