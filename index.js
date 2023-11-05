@@ -38,16 +38,30 @@ inputBtn.addEventListener("click", function() {
     render(myLeads)
 })
 
+// function render(leads) {
+//     let listItems = ""
+//     for (let i = 0; i < leads.length; i++) {
+//         listItems += `
+//             <li>
+//                 <a target='_blank' href='${leads[i]}'>
+//                     ${leads[i]}
+//                 </a>
+//             </li>
+//         `
+//     }
+//     ulEl.innerHTML = listItems  
+// }
+
 function render(leads) {
     let listItems = ""
-    for (let i = 0; i < leads.length; i++) {
+    for (let links of leads) {
         listItems += `
-            <li>
-                <a target='_blank' href='${leads[i]}'>
-                    ${leads[i]}
-                </a>
-            </li>
+        <li>
+            <a target="_blank" href="${links}">
+                ${links}
+            </a>
+        </li>
         `
     }
-    ulEl.innerHTML = listItems  
+    ulEl.innerHTML = listItems
 }
